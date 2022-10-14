@@ -15,7 +15,7 @@ namespace homeWork_queue
 
             Console.Write("Введи количесто старушек в очерди: ");
             coutGranny = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine($"Вы должны простоять:{coutGranny * queueWaitingTime / 60 } и {coutGranny * queueWaitingTime % 60} минут");
+            Console.WriteLine($"Вы должны простоять:{coutGranny * queueWaitingTime / 60 } часов и {coutGranny * queueWaitingTime % 60} минут");
             Console.ReadKey();
         }
     }
