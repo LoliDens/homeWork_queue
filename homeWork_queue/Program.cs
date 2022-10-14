@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace homeWork_queue
 {
@@ -11,11 +7,18 @@ namespace homeWork_queue
         static void Main(string[] args)
         {
             int queueWaitingTime = 10;
-            int coutGranny;
+            int numberGrendmathers;
+            int waitingTimeInHours;
+            int waitingTimeInMinutes;
+            int numberMinutesInHour = 60;
 
             Console.Write("Введи количесто старушек в очерди: ");
-            coutGranny = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine($"Вы должны простоять:{coutGranny * queueWaitingTime / 60 } часов и {coutGranny * queueWaitingTime % 60} минут");
+            numberGrendmathers = Convert.ToInt32(Console.ReadLine());
+
+            waitingTimeInHours = numberGrendmathers * queueWaitingTime / numberMinutesInHour;
+            waitingTimeInMinutes = numberGrendmathers * queueWaitingTime % numberMinutesInHour;
+
+            Console.WriteLine($"Вы должны простоять:{waitingTimeInHours} часов и {waitingTimeInMinutes} минут");
             Console.ReadKey();
         }
     }
